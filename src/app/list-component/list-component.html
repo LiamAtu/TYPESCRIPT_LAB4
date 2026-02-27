@@ -7,4 +7,18 @@
 
 <!-- this uses @FOR and TRACK to create list from array (DOES NOT USE CommonModule) -->
 <ol>@for(xyz of presidents;track xyz){
-    <li>{{xyz}}</li>}</ol>
+    <li>{{xyz}}</li>}
+</ol>
+
+<!-- this uses CommonModule to create list from array and specifically selects the name and term -->
+<ul>
+    <li *ngFor="let president of myPresidents">
+
+        {{president.name}},{{president.term}}
+    </li>
+</ul>
+
+<!-- this uses @FOR and TRACK to create list from array and and specifically selects the name and term (DOES NOT USE CommonModule) -->
+<ol>@for(president of myPresidents;track president){
+    <li>{{president.name}},{{president.term}}</li>}
+</ol>
