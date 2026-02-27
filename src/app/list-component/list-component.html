@@ -1,0 +1,10 @@
+<!-- this uses CommonModule to create list from array -->
+<ul>
+    <li *ngFor="let x of presidents">
+        {{x}}
+    </li>
+</ul>
+
+<!-- this uses @FOR and TRACK to create list from array (DOES NOT USE CommonModule) -->
+<ol>@for(xyz of presidents;track xyz){
+    <li>{{xyz}}</li>}</ol>
